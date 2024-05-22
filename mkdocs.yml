@@ -1,4 +1,4 @@
-site_name: InTheCloudDan Blog
+site_name: InTheCloudDan's Corner
 theme:
   name: material
   features:
@@ -25,9 +25,17 @@ theme:
         name: Switch to light mode    
       primary: teal
       accent: lime
+  custom_dir: .overrides
 
 plugins:
   - search
+  - blog:
+      enabled: !ENV CI
+      blog_toc: true
+      #post_dir: blog/posts
+      post_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+      authors_file: "{blog}/.authors.yml"
 
 extra:
   social:
@@ -40,7 +48,8 @@ extra:
 
 nav:
   - Home: 'index.md'
-  - Blog: "posts/index.md"
+  - Blog:
+    - blog/index.md
 
 markdown_extensions:
   - pymdownx.highlight:
