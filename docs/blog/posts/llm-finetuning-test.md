@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 date: 2024-05-22
 categories:
   - Machine Learning
@@ -31,7 +31,7 @@ wandb: ERROR It appears that you do not have permission to access the requested 
 
 The fix was to remove the `wandb_entity` key and, from the Modal docs, add `wandb_watch: gradients`.
 
-![Weights and Biases Example image](/images/wandb_example.png){ width="500" }
+![Weights and Biases Example image](../../images/wandb_example.png){ width="500" }
 
 ### Diff for ftcourse
 
