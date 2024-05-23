@@ -34,7 +34,7 @@ plugins:
       enabled: !ENV CI
       blog_toc: true
       blog_dir: "posts"
-      post_dir: "posts/entries"
+      #post_dir: "posts/entries"
       post_date_format: yyyy/MM/dd
       post_url_format: "{date}/{slug}"
       authors_file: "posts/.authors.yml"
