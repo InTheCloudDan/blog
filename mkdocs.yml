@@ -1,4 +1,6 @@
 site_name: InTheCloudDan's Corner
+site_url: https://intheclouddan.github.io/blog/
+
 theme:
   name: material
   features:
@@ -31,10 +33,11 @@ plugins:
   - blog:
       enabled: !ENV CI
       blog_toc: true
-      #post_dir: blog/posts
+      blog_dir: "posts"
+      post_dir: "posts/entries"
       post_date_format: yyyy/MM/dd
       post_url_format: "{date}/{slug}"
-      authors_file: "{blog}/.authors.yml"
+      authors_file: "posts/.authors.yml"
 
 extra:
   social:
@@ -47,7 +50,8 @@ extra:
 
 nav:
   - Home: 'index.md'
-  - Blog: blog/index.md
+  - Posts: 
+    - posts/index.md
 
 markdown_extensions:
   - pymdownx.highlight:
